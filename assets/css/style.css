@@ -1,4 +1,6 @@
-#container {
+
+
+#image-container {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -12,7 +14,19 @@
     transition: 1s;
 }
 
-#play {
+#box-button {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+#pause,
+#play,
+#avanti,
+#indietro {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: x-large;
 }

@@ -1,25 +1,56 @@
+let intervallo;
+
 let counter = 0;
 let trasla = 0;
 
-function check() {
-    if (counter == 6) {
-        trasla = 0;
-        counter = 0;
-    } else if (counter != 0) {
+function indietro() {
+    if (counter == 0) {
+        trasla = -1000;
+        counter = 5;
+    } else if (counter != -1) {
         trasla += 200;
+        counter--;
     }
-    start();
+    let images = document.getElementsByClassName("images")
+    for (let image of images) {
+        image.style.transform = `translateX(${trasla}px)`;
+    }
 }
 
-function start() {
-    counter++;
+function avanti() {
+    if (counter >= 5) {
+        trasla = 0;
+        counter = 0;
+    } else if (counter != -1) {
+        trasla += 200;
+        counter++;
+    }
     let images = document.getElementsByClassName("images")
     for (let image of images) {
         image.style.transform = `translateX(-${trasla}px)`;
     }
 }
 
-// ESEMPIO DI CLASSE PERSONA.
+function loop() {
+    intervallo = setInterval(avanti, 1000);
+}
+
+
+
+
+
+
+
+
+
+
+//! CONSOLE
+function showCounterConsole() {
+    console.log(counter);
+ }
+ setInterval(showCounterConsole, 1000);
+
+//! ESEMPIO DI CLASSE PERSONA.
 
 class Persona {
     constructor(age, hair, eyes){

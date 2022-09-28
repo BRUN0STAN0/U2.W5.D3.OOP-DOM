@@ -11,14 +11,21 @@
   </head>
   <body>
     <div id="container">
-      <div><img class="images" src="./assets/img/1.jpg" /></div>
-      <div><img class="images" src="./assets/img/2.jpg" /></div>
-      <div><img class="images" src="./assets/img/3.jpg" /></div>
-      <div><img class="images" src="./assets/img/4.jpg" /></div>
-      <div><img class="images" src="./assets/img/5.jpg" /></div>
-      <div><img class="images" src="./assets/img/6.jpg" /></div>
+      <div id="image-container">
+        <div><img class="images" src="./assets/img/1.jpg" /></div>
+        <div><img class="images" src="./assets/img/2.jpg" /></div>
+        <div><img class="images" src="./assets/img/3.jpg" /></div>
+        <div><img class="images" src="./assets/img/4.jpg" /></div>
+        <div><img class="images" src="./assets/img/5.jpg" /></div>
+        <div><img class="images" src="./assets/img/6.jpg" /></div>
+      </div>
+      <div id="box-button">
+        <div id="indietro" onclick="indietro()"><i class="fa-solid fa-angle-left"></i></div>
+        <div id="pause" onclick="clearInterval(intervallo)"><i class="fa-solid fa-pause"></i></div>
+        <div id="play" onclick="loop()"><i class="fa-solid fa-play"></i></div>
+        <div id="avanti" onclick="avanti()"><i class="fa-solid fa-chevron-right"></i></div>
+      </div>
     </div>
-    <div id="play" onclick="check()">play</div>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
