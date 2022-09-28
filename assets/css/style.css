@@ -1,6 +1,18 @@
 #container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    height: 100vh;
+    width: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.images {
+    border-radius: 20px;
+    transition: 1s;
+}
+
+#play {
+    display: flex;
+    justify-content: center;
 }
